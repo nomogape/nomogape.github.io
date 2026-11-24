@@ -1,0 +1,1615 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>老虎菜黑料网 - 品牌官网 | 原创视频内容社区</title>
+  <meta name="description" content="老虎菜黑料网官方网站，专注原创视频内容与创作者生态，提供高清正版视频、品牌故事与社区互动，企业持续运营的精品内容平台。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23111516'/%3E%3Cpath d='M20 44V20l14 8 14-8v24' stroke='%2300e5a0' stroke-width='4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3Ccircle cx='32' cy='38' r='3' fill='%23ff5c39'/%3E%3C/svg%3E">
+  <style>
+    :root{
+      --lc-bg:#0d1112;
+      --lc-surface:#151b1d;
+      --lc-surface-2:#1c2426;
+      --lc-line:#2a3538;
+      --lc-text:#e6edef;
+      --lc-text-dim:#9aa8ac;
+      --lc-accent:#00e5a0;
+      --lc-accent-soft:rgba(0,229,160,.12);
+      --lc-warn:#ff5c39;
+      --lc-warn-soft:rgba(255,92,57,.14);
+      --lc-radius:14px;
+      --lc-max:1200px;
+      --lc-sticky:108px;
+      --lc-font:"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:var(--lc-sticky)}
+    body{margin:0;background:var(--lc-bg);color:var(--lc-text);font-family:var(--lc-font);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased}
+    img{display:block;max-width:100%}
+    a{color:inherit;text-decoration:none}
+    button{font-family:inherit;cursor:pointer}
+    h1,h2,h3,h4{margin:0;line-height:1.3;font-weight:700}
+    .lc-container{width:min(100% - 40px,var(--lc-max));margin-inline:auto}
+    .lc-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+    /* ---------- 吸顶：公告条 + 页头 ---------- */
+    .lc-sticky-wrap{position:sticky;top:0;z-index:80}
+    .lc-notice-bar{
+      background:linear-gradient(90deg,#00382a,#004d38 40%,#0a2a22);
+      color:#c8fff0;font-size:.82rem;letter-spacing:.02em;
+      border-bottom:1px solid rgba(0,229,160,.25);
+    }
+    .lc-notice-inner{display:flex;align-items:center;gap:12px;padding:8px 0;flex-wrap:wrap}
+    .lc-notice-tag{
+      background:var(--lc-accent);color:#02231a;font-weight:700;font-size:.7rem;
+      padding:1px 8px;border-radius:99px;flex:none;letter-spacing:.04em;
+    }
+    .lc-notice-text{flex:1;min-width:200px}
+    .lc-notice-text a{border-bottom:1px dashed rgba(0,229,160,.6)}
+    .lc-notice-time{color:#7fd6bb;font-size:.75rem;flex:none}
+
+    .lc-header{background:rgba(13,17,18,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--lc-line)}
+    .lc-header-inner{display:flex;align-items:center;gap:22px;padding:12px 0}
+    .lc-brand{display:flex;align-items:center;gap:11px;flex:none}
+    .lc-brand-mark{
+      width:40px;height:40px;border-radius:11px;flex:none;
+      background:linear-gradient(145deg,#00e5a0,#00997a 70%);
+      display:grid;place-items:center;color:#02231a;font-weight:900;font-size:1.05rem;
+      box-shadow:0 0 0 1px rgba(0,229,160,.5),0 6px 18px -6px rgba(0,229,160,.6);
+    }
+    .lc-brand-name{font-weight:800;font-size:1.06rem;letter-spacing:.02em}
+    .lc-brand-sub{font-size:.68rem;color:var(--lc-text-dim);letter-spacing:.16em}
+    .lc-nav{display:flex;align-items:center;gap:2px;flex:1;min-width:0}
+    .lc-nav-link{
+      padding:8px 12px;border-radius:9px;font-size:.88rem;color:var(--lc-text-dim);
+      white-space:nowrap;transition:color .18s,background .18s;
+    }
+    .lc-nav-link:hover,.lc-nav-link:focus-visible{color:var(--lc-accent);background:var(--lc-accent-soft)}
+    .lc-header-tools{display:flex;align-items:center;gap:10px;flex:none}
+    .lc-search{position:relative;display:flex;align-items:center}
+    .lc-search-input{
+      width:180px;background:var(--lc-surface-2);border:1px solid var(--lc-line);
+      color:var(--lc-text);border-radius:9px;padding:8px 34px 8px 12px;font-size:.84rem;
+      transition:border-color .18s,width .22s;
+    }
+    .lc-search-input::placeholder{color:#66757a}
+    .lc-search-input:focus{outline:none;border-color:var(--lc-accent);width:220px}
+    .lc-search-btn{
+      position:absolute;right:4px;top:50%;transform:translateY(-50%);
+      background:none;border:none;color:var(--lc-text-dim);padding:5px;line-height:1;font-size:.95rem;
+    }
+    .lc-search-feedback{
+      position:absolute;top:calc(100% + 8px);left:0;right:0;min-width:220px;
+      background:var(--lc-surface-2);border:1px solid var(--lc-line);border-radius:10px;
+      padding:8px 12px;font-size:.78rem;color:var(--lc-text-dim);
+      box-shadow:0 14px 30px -12px rgba(0,0,0,.8);display:none;z-index:90;
+    }
+    .lc-search-feedback.is-show{display:block}
+    .lc-search-feedback strong{color:var(--lc-accent)}
+    .lc-btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:7px;
+      border-radius:10px;padding:9px 16px;font-size:.86rem;font-weight:600;
+      border:1px solid var(--lc-line);background:var(--lc-surface-2);color:var(--lc-text);
+      transition:transform .16s,border-color .16s,background .16s;
+    }
+    .lc-btn:hover{transform:translateY(-1px);border-color:#3d4d51}
+    .lc-btn--primary{background:var(--lc-accent);border-color:var(--lc-accent);color:#02231a;font-weight:700}
+    .lc-btn--primary:hover{background:#2bf0b6;border-color:#2bf0b6}
+    .lc-btn--ghost{background:transparent}
+    .lc-btn--warn{background:var(--lc-warn-soft);border-color:rgba(255,92,57,.45);color:#ff9b82}
+    .lc-btn--sm{padding:6px 11px;font-size:.78rem;border-radius:8px}
+    .lc-nav-toggle{
+      display:none;background:var(--lc-surface-2);border:1px solid var(--lc-line);
+      color:var(--lc-text);border-radius:9px;width:38px;height:38px;font-size:1.05rem;
+    }
+
+    /* ---------- 通用 ---------- */
+    .lc-section{padding:62px 0}
+    .lc-section--tight{padding:44px 0}
+    .lc-eyebrow{
+      font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;color:var(--lc-accent);
+      font-weight:700;margin-bottom:10px;display:block;
+    }
+    .lc-h2{font-size:clamp(1.5rem,2.6vw,2rem);letter-spacing:-.01em}
+    .lc-section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:30px}
+    .lc-section-head p{color:var(--lc-text-dim);font-size:.9rem;margin:8px 0 0;max-width:620px}
+    .lc-h3{font-size:1.06rem;margin-bottom:6px}
+    .lc-card{
+      background:var(--lc-surface);border:1px solid var(--lc-line);border-radius:var(--lc-radius);
+      transition:border-color .2s,transform .2s,box-shadow .2s;min-width:0;
+    }
+    .lc-card:hover{border-color:#3a4a4e;transform:translateY(-2px);box-shadow:0 18px 36px -24px rgba(0,0,0,.9)}
+    .lc-tag{
+      display:inline-block;font-size:.72rem;padding:2px 9px;border-radius:99px;
+      background:var(--lc-accent-soft);color:var(--lc-accent);border:1px solid rgba(0,229,160,.25);
+      margin-right:5px;margin-bottom:5px;white-space:nowrap;
+    }
+    .lc-tag--warn{background:var(--lc-warn-soft);color:#ff9b82;border-color:rgba(255,92,57,.3)}
+    .lc-tag--dim{background:rgba(154,168,172,.1);color:var(--lc-text-dim);border-color:rgba(154,168,172,.22)}
+    .lc-meta{color:var(--lc-text-dim);font-size:.78rem;display:flex;flex-wrap:wrap;gap:6px 14px;align-items:center}
+    .lc-muted{color:var(--lc-text-dim)}
+    .lc-cover{position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:10px;background:#0a0e0f}
+    .lc-cover svg{width:100%;height:100%;display:block}
+    .lc-play{
+      position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;
+    }
+    .lc-play span{
+      width:46px;height:46px;border-radius:50%;
+      background:rgba(2,35,26,.72);border:1px solid rgba(0,229,160,.75);
+      display:grid;place-items:center;color:var(--lc-accent);font-size:.9rem;
+      backdrop-filter:blur(3px);
+    }
+    .lc-cover-badge{
+      position:absolute;left:10px;top:10px;background:rgba(2,20,16,.82);
+      color:var(--lc-accent);font-size:.68rem;font-weight:700;padding:2px 9px;border-radius:99px;
+      border:1px solid rgba(0,229,160,.35);letter-spacing:.05em;
+    }
+    .lc-cover-dur{
+      position:absolute;right:10px;bottom:10px;background:rgba(0,0,0,.7);
+      color:#dff;font-size:.68rem;padding:1px 7px;border-radius:5px;
+    }
+    .lc-actions{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px;align-items:center}
+    .lc-act{
+      display:inline-flex;align-items:center;gap:5px;font-size:.76rem;
+      background:rgba(255,255,255,.03);border:1px solid var(--lc-line);color:var(--lc-text-dim);
+      padding:5px 10px;border-radius:8px;transition:color .15s,border-color .15s,background .15s;
+    }
+    .lc-act:hover{color:var(--lc-accent);border-color:rgba(0,229,160,.4);background:var(--lc-accent-soft)}
+    .lc-act.is-liked{color:var(--lc-warn);border-color:rgba(255,92,57,.5);background:var(--lc-warn-soft)}
+    .lc-act.is-saved{color:var(--lc-accent);border-color:rgba(0,229,160,.5);background:var(--lc-accent-soft)}
+
+    /* ---------- 首屏 全幅主视觉背景与浮动文字 ---------- */
+    .lc-hero{position:relative;overflow:hidden;border-bottom:1px solid var(--lc-line)}
+    .lc-hero-media{position:absolute;inset:0}
+    .lc-hero-media svg{width:100%;height:100%;object-fit:cover;display:block}
+    .lc-hero::after{
+      content:"";position:absolute;inset:0;
+      background:linear-gradient(105deg,rgba(8,12,13,.94) 0%,rgba(8,12,13,.82) 46%,rgba(8,12,13,.35) 100%);
+    }
+    .lc-hero-inner{position:relative;z-index:2;padding:76px 0 68px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:44px;align-items:end}
+    .lc-hero-title{
+      font-size:clamp(2.4rem,5.4vw,4rem);line-height:1.06;letter-spacing:-.03em;
+      margin:14px 0 18px;
+      background:linear-gradient(96deg,#ffffff 20%,#9dffe0 70%,#00e5a0 100%);
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+    }
+    .lc-hero-lead{color:#b9c7ca;font-size:1.02rem;max-width:560px}
+    .lc-hero-desc{color:#8e9da1;font-size:.88rem;margin-top:12px;max-width:560px}
+    .lc-hero-cta{display:flex;flex-wrap:wrap;gap:11px;margin-top:26px}
+    .lc-hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:34px;max-width:540px}
+    .lc-stat{
+      background:rgba(21,27,29,.72);border:1px solid rgba(0,229,160,.2);
+      border-radius:12px;padding:12px 14px;backdrop-filter:blur(6px);
+    }
+    .lc-stat-num{font-size:1.32rem;font-weight:800;color:var(--lc-accent);letter-spacing:-.02em}
+    .lc-stat-label{font-size:.72rem;color:var(--lc-text-dim);margin-top:2px}
+    .lc-hero-side{
+      background:rgba(13,17,18,.7);border:1px solid var(--lc-line);border-radius:var(--lc-radius);
+      padding:20px;backdrop-filter:blur(10px);
+    }
+    .lc-hero-side h3{font-size:.9rem;display:flex;align-items:center;gap:8px;margin-bottom:14px}
+    .lc-hero-side h3::before{content:"";width:3px;height:15px;border-radius:2px;background:var(--lc-accent)}
+    .lc-live-item{display:flex;gap:11px;padding:10px 0;border-bottom:1px dashed var(--lc-line)}
+    .lc-live-item:last-child{border-bottom:none;padding-bottom:0}
+    .lc-live-idx{
+      flex:none;width:26px;height:26px;border-radius:8px;display:grid;place-items:center;
+      background:var(--lc-surface-2);color:var(--lc-accent);font-size:.78rem;font-weight:800;
+      border:1px solid var(--lc-line);
+    }
+    .lc-live-item p{margin:0;font-size:.84rem;line-height:1.45}
+    .lc-live-item small{color:var(--lc-text-dim);font-size:.72rem}
+
+    /* ---------- 焦点大图 + 文字列表 ---------- */
+    .lc-focus-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:26px;align-items:start}
+    .lc-focus-main{padding:18px}
+    .lc-focus-main .lc-cover{aspect-ratio:16/9;margin-bottom:14px}
+    .lc-focus-main h3{font-size:1.24rem;margin-bottom:6px}
+    .lc-focus-list{display:flex;flex-direction:column;gap:2px}
+    .lc-focus-row{
+      display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;
+      padding:13px 14px;border-radius:11px;border:1px solid transparent;
+      transition:background .16s,border-color .16s;
+    }
+    .lc-focus-row:hover{background:var(--lc-surface);border-color:var(--lc-line)}
+    .lc-focus-row .lc-rank{
+      font-size:1rem;font-weight:800;color:#51646a;text-align:center;padding-top:1px;
+    }
+    .lc-focus-row:nth-child(1) .lc-rank{color:var(--lc-warn)}
+    .lc-focus-row:nth-child(2) .lc-rank{color:#ffb057}
+    .lc-focus-row h4{margin:0 0 2px;font-size:.94rem;font-weight:650}
+    .lc-focus-row p{margin:0;font-size:.78rem;color:var(--lc-text-dim);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+
+    /* ---------- 视频流 三列等高卡片 ---------- */
+    .lc-video-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+    .lc-video-card{padding:14px;display:flex;flex-direction:column;min-width:0}
+    .lc-video-card .lc-cover{margin-bottom:12px}
+    .lc-video-card h3{font-size:.98rem;margin-bottom:5px}
+    .lc-video-card p{margin:0 0 9px;font-size:.8rem;color:var(--lc-text-dim)}
+    .lc-video-card .lc-actions{margin-top:auto}
+
+    /* ---------- 专题 ---------- */
+    .lc-topic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+    .lc-topic-card{padding:20px;position:relative;overflow:hidden}
+    .lc-topic-card::before{
+      content:"";position:absolute;right:-30px;top:-30px;width:110px;height:110px;border-radius:50%;
+      background:radial-gradient(circle,rgba(0,229,160,.16),transparent 70%);
+    }
+    .lc-topic-status{font-size:.7rem;color:var(--lc-accent);border:1px dashed rgba(0,229,160,.4);padding:1px 8px;border-radius:99px;display:inline-block;margin-bottom:12px}
+    .lc-topic-card h3{font-size:1.04rem;margin-bottom:6px}
+    .lc-topic-card > p{font-size:.82rem;color:var(--lc-text-dim);margin:0 0 13px}
+    .lc-topic-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+    .lc-topic-list li{display:flex;gap:8px;font-size:.82rem;align-items:flex-start}
+    .lc-topic-list li::before{content:"›";color:var(--lc-accent);font-weight:800;flex:none;line-height:1.5}
+
+    /* ---------- 品牌解析（长文） ---------- */
+    .lc-deep{background:linear-gradient(180deg,var(--lc-surface) 0%,var(--lc-bg) 100%);border-top:1px solid var(--lc-line);border-bottom:1px solid var(--lc-line)}
+    .lc-deep-wrap{display:grid;grid-template-columns:minmax(0,.66fr) minmax(0,1.34fr);gap:40px;align-items:start}
+    .lc-deep-side{position:sticky;top:calc(var(--lc-sticky) + 20px)}
+    .lc-deep-side h2{margin-bottom:12px}
+    .lc-deep-side p{color:var(--lc-text-dim);font-size:.86rem;margin:0 0 18px}
+    .lc-deep-side .lc-cover{margin-bottom:18px}
+    .lc-deep-body h3{font-size:1.1rem;margin:26px 0 9px;padding-left:12px;border-left:3px solid var(--lc-accent)}
+    .lc-deep-body h3:first-child{margin-top:0}
+    .lc-deep-body p{margin:0 0 13px;color:#c3cfd2;font-size:.94rem}
+    .lc-deep-body p:last-child{margin-bottom:0}
+
+    /* ---------- 作者 双列简介 ---------- */
+    .lc-author-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .lc-author-card{padding:18px;display:grid;grid-template-columns:56px minmax(0,1fr);gap:14px;align-items:start}
+    .lc-avatar{
+      width:56px;height:56px;border-radius:16px;display:grid;place-items:center;
+      font-weight:800;font-size:1.15rem;flex:none;letter-spacing:.02em;
+    }
+    .lc-avatar--a{background:linear-gradient(140deg,#00e5a0,#007a5c);color:#02231a}
+    .lc-avatar--b{background:linear-gradient(140deg,#ff5c39,#a32a10);color:#fff}
+    .lc-avatar--c{background:linear-gradient(140deg,#4c8dff,#1c3f8f);color:#fff}
+    .lc-avatar--d{background:linear-gradient(140deg,#ffd166,#a87600);color:#2a1c00}
+    .lc-avatar--e{background:linear-gradient(140deg,#d17bff,#6a1fa8);color:#fff}
+    .lc-avatar--f{background:linear-gradient(140deg,#3ad6c8,#0a5c55);color:#02231a}
+    .lc-author-card h3{font-size:.98rem;margin-bottom:2px}
+    .lc-author-field{font-size:.74rem;color:var(--lc-accent);margin-bottom:7px;display:block}
+    .lc-author-card p{margin:0 0 9px;font-size:.81rem;color:var(--lc-text-dim)}
+    .lc-author-stats{display:flex;gap:14px;font-size:.74rem;color:#7f9095;flex-wrap:wrap}
+
+    /* ---------- 评论 双列短评 ---------- */
+    .lc-comment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .lc-comment-card{padding:16px 18px;display:flex;flex-direction:column;gap:9px}
+    .lc-comment-top{display:flex;align-items:center;gap:10px}
+    .lc-comment-avatar{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:800;flex:none}
+    .lc-comment-name{font-size:.84rem;font-weight:600}
+    .lc-comment-stars{margin-left:auto;color:#ffb057;font-size:.74rem;letter-spacing:1px}
+    .lc-comment-card p{margin:0;font-size:.85rem;color:#c1cdd0}
+    .lc-comment-foot{font-size:.7rem;color:#6d7d82;display:flex;gap:12px;flex-wrap:wrap}
+
+    /* ---------- 企业动态时间线 ---------- */
+    .lc-news-list{display:flex;flex-direction:column;gap:0;border-left:1px solid var(--lc-line);margin-left:8px}
+    .lc-news-item{position:relative;padding:0 0 26px 24px}
+    .lc-news-item:last-child{padding-bottom:0}
+    .lc-news-item::before{
+      content:"";position:absolute;left:-5px;top:7px;width:9px;height:9px;border-radius:50%;
+      background:var(--lc-bg);border:2px solid var(--lc-accent);
+    }
+    .lc-news-date{font-size:.72rem;color:var(--lc-accent);letter-spacing:.04em;font-weight:700}
+    .lc-news-item h3{font-size:.96rem;margin:3px 0 4px}
+    .lc-news-item p{margin:0;font-size:.82rem;color:var(--lc-text-dim)}
+
+    /* ---------- 合作品牌 ---------- */
+    .lc-partner-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+    .lc-partner{
+      padding:20px 14px;text-align:center;border-radius:12px;border:1px dashed var(--lc-line);
+      background:var(--lc-surface);transition:border-color .18s,color .18s;
+    }
+    .lc-partner:hover{border-color:rgba(0,229,160,.45)}
+    .lc-partner strong{display:block;font-size:.92rem;margin-bottom:3px}
+    .lc-partner span{font-size:.7rem;color:var(--lc-text-dim)}
+
+    /* ---------- FAQ ---------- */
+    .lc-faq{display:flex;flex-direction:column;gap:10px}
+    .lc-faq details{background:var(--lc-surface);border:1px solid var(--lc-line);border-radius:11px;overflow:hidden}
+    .lc-faq details[open]{border-color:rgba(0,229,160,.4)}
+    .lc-faq summary{
+      cursor:pointer;padding:14px 18px;font-size:.9rem;font-weight:600;list-style:none;
+      display:flex;justify-content:space-between;gap:12px;align-items:center;
+    }
+    .lc-faq summary::-webkit-details-marker{display:none}
+    .lc-faq summary::after{content:"＋";color:var(--lc-accent);font-weight:400;font-size:1.05rem;transition:transform .2s;flex:none}
+    .lc-faq details[open] summary::after{content:"－"}
+    .lc-faq details p{margin:0;padding:0 18px 16px;font-size:.84rem;color:var(--lc-text-dim);border-top:1px dashed var(--lc-line);padding-top:12px}
+
+    /* ---------- 投稿 CTA ---------- */
+    .lc-cta-band{
+      background:linear-gradient(100deg,#062e25,#0b3f33 55%,#10201d);
+      border:1px solid rgba(0,229,160,.28);border-radius:18px;padding:32px;
+      display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;
+      position:relative;overflow:hidden;
+    }
+    .lc-cta-band::after{
+      content:"";position:absolute;right:-60px;bottom:-80px;width:240px;height:240px;border-radius:50%;
+      background:radial-gradient(circle,rgba(0,229,160,.22),transparent 70%);
+    }
+    .lc-cta-band h2{font-size:1.4rem;margin-bottom:6px}
+    .lc-cta-band p{margin:0;color:#a9cfc5;font-size:.88rem;max-width:560px}
+
+    /* ---------- 页脚 ---------- */
+    .lc-footer{border-top:1px solid var(--lc-line);background:#0a0e0f;padding:46px 0 28px;margin-top:10px}
+    .lc-footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:34px}
+    .lc-footer-grid h4{font-size:.84rem;letter-spacing:.06em;color:#cfdadc;margin-bottom:13px}
+    .lc-footer-links{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+    .lc-footer-links a{font-size:.82rem;color:var(--lc-text-dim)}
+    .lc-footer-links a:hover{color:var(--lc-accent)}
+    .lc-footer-brand p{font-size:.82rem;color:var(--lc-text-dim);margin:12px 0 0;max-width:330px}
+    .lc-footer-bottom{
+      margin-top:34px;padding-top:18px;border-top:1px solid var(--lc-line);
+      display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;
+      font-size:.75rem;color:#6d7d82;
+    }
+
+    /* ---------- 回到顶部 / Toast / 弹窗 ---------- */
+    .lc-to-top{
+      position:fixed;right:22px;bottom:24px;z-index:70;width:44px;height:44px;border-radius:50%;
+      background:var(--lc-accent);color:#02231a;border:none;font-size:1.1rem;font-weight:800;
+      box-shadow:0 12px 26px -10px rgba(0,229,160,.7);
+      opacity:0;visibility:hidden;transform:translateY(10px);transition:.22s;
+    }
+    .lc-to-top.is-show{opacity:1;visibility:visible;transform:none}
+    .lc-toast{
+      position:fixed;left:50%;bottom:34px;transform:translate(-50%,16px);z-index:120;
+      background:var(--lc-surface-2);border:1px solid rgba(0,229,160,.45);color:var(--lc-text);
+      padding:11px 20px;border-radius:11px;font-size:.84rem;
+      box-shadow:0 20px 44px -18px rgba(0,0,0,.9);opacity:0;visibility:hidden;transition:.22s;
+      max-width:calc(100% - 40px);
+    }
+    .lc-toast.is-show{opacity:1;visibility:visible;transform:translate(-50%,0)}
+    .lc-modal{position:fixed;inset:0;z-index:130;display:none;place-items:center;padding:20px}
+    .lc-modal.is-open{display:grid}
+    .lc-modal-backdrop{position:absolute;inset:0;background:rgba(4,7,8,.78);backdrop-filter:blur(4px)}
+    .lc-modal-panel{
+      position:relative;width:min(100%,480px);background:var(--lc-surface);
+      border:1px solid var(--lc-line);border-radius:16px;padding:26px;
+      box-shadow:0 30px 70px -24px rgba(0,0,0,.95);max-height:86vh;overflow:auto;
+    }
+    .lc-modal-panel h3{font-size:1.1rem;margin-bottom:8px}
+    .lc-modal-panel p{font-size:.86rem;color:var(--lc-text-dim);margin:0 0 16px}
+    .lc-modal-close{
+      position:absolute;right:14px;top:12px;background:none;border:none;color:var(--lc-text-dim);
+      font-size:1.1rem;line-height:1;padding:6px;
+    }
+    .lc-form{display:flex;flex-direction:column;gap:10px}
+    .lc-form label{font-size:.78rem;color:var(--lc-text-dim)}
+    .lc-input,.lc-textarea{
+      width:100%;background:var(--lc-surface-2);border:1px solid var(--lc-line);
+      color:var(--lc-text);border-radius:9px;padding:9px 12px;font-size:.86rem;font-family:inherit;
+    }
+    .lc-input:focus,.lc-textarea:focus{outline:none;border-color:var(--lc-accent)}
+    .lc-textarea{resize:vertical;min-height:92px}
+
+    /* ---------- 响应式 ---------- */
+    @media (max-width:1024px){
+      .lc-hero-inner{grid-template-columns:1fr;gap:30px;align-items:start}
+      .lc-hero-side{max-width:560px}
+      .lc-focus-grid{grid-template-columns:1fr}
+      .lc-video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .lc-topic-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .lc-deep-wrap{grid-template-columns:1fr;gap:26px}
+      .lc-deep-side{position:static}
+      .lc-footer-grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:820px){
+      .lc-nav{
+        display:none;position:absolute;left:0;right:0;top:100%;
+        background:var(--lc-surface);border-bottom:1px solid var(--lc-line);
+        flex-direction:column;align-items:stretch;padding:10px;gap:2px;
+        box-shadow:0 24px 40px -22px rgba(0,0,0,.9);
+      }
+      .lc-nav.is-open{display:flex}
+      .lc-nav-link{padding:11px 14px;border-radius:9px}
+      .lc-header-inner{position:relative;flex-wrap:wrap}
+      .lc-nav-toggle{display:inline-grid;place-items:center;order:3}
+      .lc-search-input{width:140px}
+      .lc-search-input:focus{width:170px}
+      .lc-author-grid{grid-template-columns:1fr}
+      .lc-comment-grid{grid-template-columns:1fr}
+      .lc-partner-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .lc-hero-stats{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:640px){
+      .lc-section{padding:44px 0}
+      .lc-header-inner{gap:12px;padding:10px 0}
+      .lc-search{display:none}
+      .lc-video-grid{grid-template-columns:1fr}
+      .lc-topic-grid{grid-template-columns:1fr}
+      .lc-hero-inner{padding:56px 0 46px}
+      .lc-hero-stats{grid-template-columns:1fr}
+      .lc-footer-grid{grid-template-columns:1fr}
+      .lc-cta-band{padding:24px}
+      .lc-brand-sub{display:none}
+    }
+    @media (prefers-reduced-motion:reduce){
+      *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+    }
+  </style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+  <!-- ===== 吸顶：公告条 + 页头 ===== -->
+  <div class="lc-sticky-wrap">
+    <div class="lc-notice-bar">
+      <div class="lc-container lc-notice-inner">
+        <span class="lc-notice-tag">官方发布</span>
+        <span class="lc-notice-text">
+          新增「城市夜行·第三季」4K 正版内容上线，<a href="#lc-videos">点击查看本季 12 支原创短片</a>；创作者激励计划同步开放报名，入选作品将获得首页推荐与流量扶持。
+        </span>
+        <span class="lc-notice-time">2026-11-22 更新</span>
+      </div>
+    </div>
+
+    <header class="lc-header">
+      <div class="lc-container lc-header-inner">
+        <a href="#lc-top" class="lc-brand" aria-label="老虎菜黑料网 官网首页">
+          <span class="lc-brand-mark" aria-hidden="true">虎</span>
+          <span>
+            <span class="lc-brand-name">老虎菜黑料网</span>
+            <span class="lc-brand-sub">原创视频品牌官网</span>
+          </span>
+        </a>
+        <nav class="lc-nav" id="lc-nav" aria-label="主导航">
+          <a class="lc-nav-link" href="#lc-videos">精品内容</a>
+          <a class="lc-nav-link" href="#lc-topics">专题企划</a>
+          <a class="lc-nav-link" href="#lc-deep">品牌解析</a>
+          <a class="lc-nav-link" href="#lc-authors">创作者</a>
+          <a class="lc-nav-link" href="#lc-reviews">社区口碑</a>
+          <a class="lc-nav-link" href="#lc-news">企业动态</a>
+          <a class="lc-nav-link" href="#lc-faq">帮助中心</a>
+        </nav>
+        <div class="lc-header-tools">
+          <div class="lc-search" role="search">
+            <input type="search" id="lc-search-input" class="lc-search-input" placeholder="搜索视频 / 创作者" aria-label="站内搜索">
+            <button type="button" id="lc-search-btn" class="lc-search-btn" aria-label="搜索">⌕</button>
+            <div class="lc-search-feedback" id="lc-search-feedback" role="status" aria-live="polite"></div>
+          </div>
+          <button type="button" class="lc-btn lc-btn--primary lc-btn--sm" id="lc-upload-btn">上传作品</button>
+          <button type="button" class="lc-nav-toggle" id="lc-nav-toggle" aria-label="展开导航菜单" aria-expanded="false" aria-controls="lc-nav">☰</button>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <main id="lc-top">
+
+    <!-- ===== 首屏：全幅主视觉 + 浮动文字 ===== -->
+    <section class="lc-hero" aria-labelledby="lc-hero-heading">
+      <div class="lc-hero-media" aria-hidden="true">
+        <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" role="img" aria-label="老虎菜黑料网品牌主视觉：霓虹夜色中的视频画框与流动光带">
+          <defs>
+            <linearGradient id="lcHeroBg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#07110f"/>
+              <stop offset=".5" stop-color="#0c1d1a"/>
+              <stop offset="1" stop-color="#04100d"/>
+            </linearGradient>
+            <linearGradient id="lcHeroBeam" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#00e5a0" stop-opacity="0"/>
+              <stop offset=".5" stop-color="#00e5a0" stop-opacity=".7"/>
+              <stop offset="1" stop-color="#00e5a0" stop-opacity="0"/>
+            </linearGradient>
+            <linearGradient id="lcHeroFrame" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#00e5a0"/>
+              <stop offset="1" stop-color="#005f49"/>
+            </linearGradient>
+            <radialGradient id="lcHeroGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0" stop-color="#00e5a0" stop-opacity=".35"/>
+              <stop offset="1" stop-color="#00e5a0" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="1600" height="900" fill="url(#lcHeroBg)"/>
+          <circle cx="1180" cy="270" r="330" fill="url(#lcHeroGlow)"/>
+          <circle cx="360" cy="700" r="260" fill="url(#lcHeroGlow)" opacity=".5"/>
+          <g stroke="#123029" stroke-width="1">
+            <path d="M0 760 L1600 520" opacity=".6"/>
+            <path d="M0 820 L1600 580" opacity=".4"/>
+            <path d="M0 700 L1600 460" opacity=".35"/>
+            <path d="M120 0 L520 900" opacity=".3"/>
+            <path d="M300 0 L700 900" opacity=".2"/>
+          </g>
+          <g transform="translate(940 180)">
+            <rect x="0" y="0" width="470" height="300" rx="18" fill="#0b1715" stroke="url(#lcHeroFrame)" stroke-width="2.5"/>
+            <rect x="18" y="18" width="434" height="264" rx="12" fill="#07100e"/>
+            <path d="M60 210 L150 110 L240 190 L330 90 L410 170" fill="none" stroke="#00e5a0" stroke-width="3" stroke-linecap="round" opacity=".85"/>
+            <circle cx="235" cy="150" r="34" fill="none" stroke="#00e5a0" stroke-width="3"/>
+            <path d="M225 136 L252 150 L225 164 Z" fill="#00e5a0"/>
+            <rect x="18" y="240" width="180" height="8" rx="4" fill="#00e5a0" opacity=".65"/>
+            <rect x="210" y="240" width="90" height="8" rx="4" fill="#2c4a43"/>
+            <rect x="312" y="240" width="140" height="8" rx="4" fill="#2c4a43"/>
+          </g>
+          <path d="M0 430 C 300 380, 620 470, 900 400 S 1400 300, 1600 360" fill="none" stroke="url(#lcHeroBeam)" stroke-width="2.2"/>
+          <path d="M0 500 C 340 440, 660 540, 960 460 S 1420 380, 1600 430" fill="none" stroke="url(#lcHeroBeam)" stroke-width="1.4" opacity=".7"/>
+          <g fill="#00e5a0">
+            <circle cx="620" cy="440" r="3.4" opacity=".9"/>
+            <circle cx="900" cy="402" r="2.6" opacity=".7"/>
+            <circle cx="1240" cy="330" r="3" opacity=".6"/>
+            <circle cx="1520" cy="366" r="2.2" opacity=".5"/>
+          </g>
+          <g transform="translate(120 140)" opacity=".9">
+            <rect x="0" y="0" width="230" height="120" rx="12" fill="#0b1715" stroke="#1d3a33"/>
+            <rect x="16" y="18" width="70" height="8" rx="4" fill="#00e5a0" opacity=".8"/>
+            <rect x="16" y="36" width="150" height="6" rx="3" fill="#2c4a43"/>
+            <rect x="16" y="50" width="120" height="6" rx="3" fill="#2c4a43"/>
+            <circle cx="190" cy="82" r="18" fill="none" stroke="#00e5a0" stroke-width="2"/>
+            <path d="M184 74 L198 82 L184 90 Z" fill="#00e5a0"/>
+          </g>
+        </svg>
+      </div>
+      <div class="lc-container lc-hero-inner">
+        <div>
+          <span class="lc-eyebrow">官方网站 · 品牌首页</span>
+          <h1 class="lc-hero-title">老虎菜黑料网</h1>
+          <p class="lc-hero-lead">作为深耕原创视频领域的品牌平台，我们以高清正版内容与活跃的创作者社区，持续输出真实、温暖、有力量的影像故事。</p>
+          <p class="lc-hero-desc">老虎菜黑料网官方网站专注精品内容与内容生态建设，从城市探索到日常记录，从深度访谈到手作教程，让每一份创意被看见、被陪伴、被收藏。</p>
+          <div class="lc-hero-cta">
+            <a class="lc-btn lc-btn--primary" href="#lc-videos">观看精品内容</a>
+            <a class="lc-btn" href="#lc-topics">浏览专题企划</a>
+            <button type="button" class="lc-btn lc-btn--ghost" id="lc-hero-join">成为创作者</button>
+          </div>
+          <div class="lc-hero-stats" aria-label="品牌核心数据">
+            <div class="lc-stat">
+              <div class="lc-stat-num">2,860+</div>
+              <div class="lc-stat-label">原创视频作品</div>
+            </div>
+            <div class="lc-stat">
+              <div class="lc-stat-num">1,240 万</div>
+              <div class="lc-stat-label">社区累计播放</div>
+            </div>
+            <div class="lc-stat">
+              <div class="lc-stat-num">386 位</div>
+              <div class="lc-stat-label">签约创作者</div>
+            </div>
+          </div>
+        </div>
+        <aside class="lc-hero-side" aria-label="官方发布速览">
+          <h3>官方发布 · 本周精选</h3>
+          <div class="lc-live-item">
+            <span class="lc-live-idx">01</span>
+            <div>
+              <p>《夜行成都：凌晨三点的火锅摊》4K 正片上线</p>
+              <small>城市探索 · 城市夜行第三季</small>
+            </div>
+          </div>
+          <div class="lc-live-item">
+            <span class="lc-live-idx">02</span>
+            <div>
+              <p>创作者访谈：把菜市场拍成纪录片的第 400 天</p>
+              <small>人物访谈 · 创作者故事</small>
+            </div>
+          </div>
+          <div class="lc-live-item">
+            <span class="lc-live-idx">03</span>
+            <div>
+              <p>「老虎菜实验室」手作教程合集开放下载</p>
+              <small>教程干货 · 官方整理</small>
+            </div>
+          </div>
+          <div class="lc-live-item">
+            <span class="lc-live-idx">04</span>
+            <div>
+              <p>社区投票：你最想看到的下一季主题</p>
+              <small>互动 · 投票进行中</small>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===== S3 焦点内容：大图 + 文字列表 ===== -->
+    <section class="lc-section" id="lc-videos" aria-labelledby="lc-videos-heading">
+      <div class="lc-container">
+        <div class="lc-section-head">
+          <div>
+            <span class="lc-eyebrow">精品内容</span>
+            <h2 class="lc-h2" id="lc-videos-heading">老虎菜黑料网焦点推荐</h2>
+            <p>由官方编辑部精选的原创高清内容，覆盖城市探索、人物访谈与实用教程，每一支都值得完整看完。</p>
+          </div>
+          <button type="button" class="lc-btn lc-btn--sm" id="lc-copy-link">复制本站分享链接</button>
+        </div>
+
+        <div class="lc-focus-grid">
+          <article class="lc-card lc-focus-main">
+            <div class="lc-cover">
+              <svg viewBox="0 0 640 360" role="img" aria-label="城市夜行第三季封面：雨夜街道霓虹灯下的骑行者剪影">
+                <defs>
+                  <linearGradient id="lcFocusSky" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0" stop-color="#0a1a22"/>
+                    <stop offset="1" stop-color="#12303a"/>
+                  </linearGradient>
+                  <linearGradient id="lcFocusRoad" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0" stop-color="#1b3b44"/>
+                    <stop offset="1" stop-color="#0b1f25"/>
+                  </linearGradient>
+                </defs>
+                <rect width="640" height="360" fill="url(#lcFocusSky)"/>
+                <g fill="#0e2630">
+                  <rect x="30" y="120" width="90" height="200"/>
+                  <rect x="140" y="80" width="70" height="240"/>
+                  <rect x="230" y="150" width="110" height="170"/>
+                  <rect x="370" y="60" width="80" height="260"/>
+                  <rect x="470" y="130" width="140" height="190"/>
+                </g>
+                <g fill="#ffb057" opacity=".85">
+                  <rect x="52" y="140" width="10" height="10"/><rect x="78" y="170" width="10" height="10"/>
+                  <rect x="160" y="104" width="9" height="9"/><rect x="182" y="136" width="9" height="9"/>
+                  <rect x="256" y="176" width="9" height="9"/><rect x="292" y="200" width="9" height="9"/>
+                  <rect x="394" y="88" width="9" height="9"/><rect x="418" y="120" width="9" height="9"/>
+                  <rect x="498" y="158" width="10" height="10"/><rect x="548" y="190" width="10" height="10"/>
+                </g>
+                <g fill="#00e5a0" opacity=".8">
+                  <rect x="66" y="210" width="8" height="8"/><rect x="168" y="200" width="8" height="8"/>
+                  <rect x="272" y="240" width="8" height="8"/><rect x="404" y="160" width="8" height="8"/>
+                  <rect x="524" y="240" width="8" height="8"/>
+                </g>
+                <rect x="0" y="300" width="640" height="60" fill="url(#lcFocusRoad)"/>
+                <path d="M0 322 L640 308" stroke="#2c5a63" stroke-width="2" stroke-dasharray="18 14"/>
+                <g transform="translate(250 214)">
+                  <circle cx="20" cy="62" r="20" fill="none" stroke="#cfe9e5" stroke-width="4"/>
+                  <circle cx="98" cy="62" r="20" fill="none" stroke="#cfe9e5" stroke-width="4"/>
+                  <path d="M20 62 L52 26 L92 26 L98 62" fill="none" stroke="#cfe9e5" stroke-width="4" stroke-linecap="round"/>
+                  <path d="M52 26 L58 -6" stroke="#cfe9e5" stroke-width="4" stroke-linecap="round"/>
+                  <circle cx="58" cy="-14" r="9" fill="#cfe9e5"/>
+                  <path d="M58 -6 L82 4" stroke="#cfe9e5" stroke-width="4" stroke-linecap="round"/>
+                </g>
+                <g opacity=".5">
+                  <path d="M120 340 C 220 300, 320 350, 420 316 S 560 300, 640 330" fill="none" stroke="#00e5a0" stroke-width="2"/>
+                </g>
+              </svg>
+              <span class="lc-cover-badge">官方主推</span>
+              <span class="lc-cover-dur">18:42</span>
+              <span class="lc-play" aria-hidden="true"><span>▶</span></span>
+            </div>
+            <span class="lc-tag">城市探索</span><span class="lc-tag lc-tag--warn">4K 正版</span><span class="lc-tag lc-tag--dim">第三季</span>
+            <h3>夜行成都：凌晨三点的火锅摊与守夜人</h3>
+            <p class="lc-muted" style="font-size:.85rem;margin:2px 0 0">跟随创作者「阿葱的镜头」走进凌晨三点的老街，记录火锅摊主老周二十年如一日的守夜日常，一支关于城市温度的原创纪录短片。</p>
+            <div class="lc-meta" style="margin-top:8px">
+              <span>作者：阿葱的镜头</span><span>播放 82.6 万</span><span>点赞 4.1 万</span>
+            </div>
+            <div class="lc-actions">
+              <button type="button" class="lc-act" data-like="1">♡ 点赞 <span class="lc-like-count">4.1万</span></button>
+              <button type="button" class="lc-act" data-save="1">◇ 收藏</button>
+              <button type="button" class="lc-act" data-comment="夜行成都">评论</button>
+              <button type="button" class="lc-act" data-report="夜行成都">举报</button>
+            </div>
+          </article>
+
+          <div class="lc-focus-list" aria-label="焦点推荐文字列表">
+            <div class="lc-focus-row">
+              <span class="lc-rank">02</span>
+              <div>
+                <h4>创作者访谈：把菜市场拍成纪录片的第 400 天</h4>
+                <p>人物访谈 · 从清晨五点的鱼摊到黄昏收市，镜头下 37 位摊主的生活切片。</p>
+                <div class="lc-meta"><span>老K不熬夜</span><span>播放 61.3 万</span><span>点赞 3.2 万</span></div>
+              </div>
+            </div>
+            <div class="lc-focus-row">
+              <span class="lc-rank">03</span>
+              <div>
+                <h4>老虎菜实验室：3 分钟学会手机拍摄低角度运镜</h4>
+                <p>教程干货 · 完整拆解 6 个实用镜头，附参数与练习清单，官方整理可下载。</p>
+                <div class="lc-meta"><span>小满手记</span><span>播放 48.9 万</span><span>点赞 2.7 万</span></div>
+              </div>
+            </div>
+            <div class="lc-focus-row">
+              <span class="lc-rank">04</span>
+              <div>
+                <h4>深夜食堂背后的供应链：一份食材的 12 小时</h4>
+                <p>深度测评 · 从批发市场到后厨，用影像还原一份食材的完整旅程。</p>
+                <div class="lc-meta"><span>晚风食记</span><span>播放 39.5 万</span><span>点赞 2.1 万</span></div>
+              </div>
+            </div>
+            <div class="lc-focus-row">
+              <span class="lc-rank">05</span>
+              <div>
+                <h4>一间 60 ㎡ 老房子的改造记录：从图纸到入住</h4>
+                <p>生活方式 · 12 期连载完结篇，真实预算、踩坑清单与最终入住实拍。</p>
+                <div class="lc-meta"><span>木木改造中</span><span>播放 35.2 万</span><span>点赞 1.9 万</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== S4 视频流：三列等高卡片 ===== -->
+    <section class="lc-section lc-section--tight" aria-labelledby="lc-stream-heading">
+      <div class="lc-container">
+        <div class="lc-section-head">
+          <div>
+            <span class="lc-eyebrow">社区热门</span>
+            <h2 class="lc-h2" id="lc-stream-heading">正在被社区反复播放的原创视频</h2>
+            <p>老虎菜黑料网社区热度榜实时更新，来自创作者的真实记录与经验分享，值得信赖的口碑内容持续积累。</p>
+          </div>
+        </div>
+        <div class="lc-video-grid">
+          <article class="lc-card lc-video-card">
+            <div class="lc-cover">
+              <svg viewBox="0 0 400 225" role="img" aria-label="清晨菜市场蔬菜摊位的俯拍画面，摊主正在整理绿叶菜">
+                <rect width="400" height="225" fill="#132b22"/>
+                <rect x="20" y="96" width="360" height="14" rx="4" fill="#3a5a4a"/>
+                <g>
+                  <ellipse cx="70" cy="94" rx="26" ry="12" fill="#2f7d4f"/>
+                  <ellipse cx="120" cy="90" rx="30" ry="14" fill="#3d9c62"/>
+                  <ellipse cx="180" cy="94" rx="24" ry="11" fill="#2b764a"/>
+                  <ellipse cx="232" cy="90" rx="28" ry="13" fill="#48b072"/>
+                  <ellipse cx="292" cy="94" rx="25" ry="11" fill="#2f7d4f"/>
+                  <ellipse cx="340" cy="90" rx="22" ry="10" fill="#3d9c62"/>
+                </g>
+                <rect x="14" y="108" width="372" height="72" rx="8" fill="#1b3a2e"/>
+                <rect x="30" y="126" width="90" height="10" rx="5" fill="#2f7d4f" opacity=".7"/>
+                <rect x="30" y="146" width="130" height="7" rx="3.5" fill="#2a5544"/>
+                <rect x="260" y="128" width="78" height="34" rx="6" fill="#0f2a20" stroke="#3d9c62"/>
+                <text x="272" y="150" font-size="13" fill="#9dffd3" font-family="sans-serif">5:40</text>
+                <circle cx="220" cy="148" r="22" fill="#cfe9d8"/>
+                <path d="M210 138 q10 -8 20 0" stroke="#2f7d4f" stroke-width="3" fill="none"/>
+              </svg>
+              <span class="lc-cover-dur">07:18</span>
+              <span class="lc-play" aria-hidden="true"><span>▶</span></span>
+            </div>
+            <span class="lc-tag">日常记录</span>
+            <h3>5 点 40 分的菜市场：一天里最新鲜的 30 分钟</h3>
+            <p>跟着摊主阿梅认识 12 种时令蔬菜，记录早市最繁忙的一段真实光景。</p>
+            <div class="lc-meta"><span>晚风食记</span><span>播放 27.4 万</span></div>
+            <div class="lc-actions">
+              <button type="button" class="lc-act" data-like="1">♡ 点赞 <span class="lc-like-count">1.3万</span></button>
+              <button type="button" class="lc-act" data-save="1">◇ 收藏</button>
+              <button type="button" class="lc-act" data-comment="菜市场">评论</button>
+            </div>
+          </article>
+
+          <article class="lc-card lc-video-card">
+            <div class="lc-cover">
+              <svg viewBox="0 0 400 225" role="img" aria-label="手持手机拍摄运镜教程画面，屏幕中出现九宫格构图参考线">
+                <rect width="400" height="225" fill="#0e1f26"/>
+                <rect x="84" y="30" width="104" height="176" rx="14" fill="#142c34" stroke="#2d5661"/>
+                <rect x="94" y="42" width="84" height="140" rx="6" fill="#0a171c"/>
+                <g stroke="#00e5a0" stroke-width="1" opacity=".6">
+                  <path d="M94 88 H178"/><path d="M94 135 H178"/>
+                  <path d="M122 42 V182"/><path d="M150 42 V182"/>
+                </g>
+                <rect x="104" y="150" width="40" height="6" rx="3" fill="#00e5a0"/>
+                <g transform="translate(228 48)">
+                  <rect width="140" height="128" rx="12" fill="#132b33" stroke="#2d5661"/>
+                  <path d="M20 96 L48 52 L76 82 L104 38 L124 70" fill="none" stroke="#00e5a0" stroke-width="2.6" stroke-linecap="round"/>
+                  <circle cx="104" cy="38" r="4" fill="#ff5c39"/>
+                  <rect x="18" y="108" width="70" height="5" rx="2.5" fill="#2d5661"/>
+                </g>
+                <circle cx="330" cy="190" r="16" fill="none" stroke="#00e5a0" stroke-width="2"/>
+                <path d="M324 184 L338 190 L324 196 Z" fill="#00e5a0"/>
+              </svg>
+              <span class="lc-cover-dur">03:52</span>
+              <span class="lc-play" aria-hidden="true"><span>▶</span></span>
+            </div>
+            <span class="lc-tag">教程干货</span>
+            <h3>手机运镜入门：6 个低角度镜头一次讲透</h3>
+            <p>从握持姿势到行走节奏，附完整练习清单与参数设置，新手也能拍出电影感。</p>
+            <div class="lc-meta"><span>小满手记</span><span>播放 22.8 万</span></div>
+            <div class="lc-actions">
+              <button type="button" class="lc-act" data-like="1">♡ 点赞 <span class="lc-like-count">9,820</span></button>
+              <button type="button" class="lc-act" data-save="1">◇ 收藏</button>
+              <button type="button" class="lc-act" data-comment="手机运镜">评论</button>
+            </div>
+          </article>
+
+          <article class="lc-card lc-video-card">
+            <div class="lc-cover">
+              <svg viewBox="0 0 400 225" role="img" aria-label="老房子改造完成后的客厅全景，木质家具与绿植">
+                <rect width="400" height="225" fill="#1b2620"/>
+                <rect x="0" y="150" width="400" height="75" fill="#2a372e"/>
+                <rect x="30" y="40" width="120" height="92" rx="6" fill="#28433a" stroke="#4f7a66"/>
+                <path d="M30 40 L90 92 L150 40" fill="none" stroke="#4f7a66" stroke-width="2"/>
+                <rect x="180" y="104" width="130" height="46" rx="8" fill="#3e5a4a"/>
+                <rect x="188" y="92" width="114" height="16" rx="8" fill="#547a63"/>
+                <rect x="330" y="72" width="48" height="78" rx="6" fill="#2e4438"/>
+                <ellipse cx="354" cy="70" rx="24" ry="18" fill="#3d9c62"/>
+                <ellipse cx="344" cy="56" rx="14" ry="10" fill="#2f7d4f"/>
+                <rect x="254" y="62" width="20" height="48" rx="4" fill="#c9a46a"/>
+                <circle cx="264" cy="52" r="13" fill="#ffd166" opacity=".85"/>
+                <path d="M0 190 H400" stroke="#547a63" stroke-width="2" stroke-dasharray="10 8" opacity=".5"/>
+              </svg>
+              <span class="lc-cover-dur">12:06</span>
+              <span class="lc-play" aria-hidden="true"><span>▶</span></span>
+            </div>
+            <span class="lc-tag">生活方式</span>
+            <h3>60 ㎡ 老房改造完结篇：预算、踩坑与入住实拍</h3>
+            <p>12 期连载的最后一支，公开全部账单与改造前后对比，真实到让人意外。</p>
+            <div class="lc-meta"><span>木木改造中</span><span>播放 19.6 万</span></div>
+            <div class="lc-actions">
+              <button type="button" class="lc-act" data-like="1">♡ 点赞 <span class="lc-like-count">8,430</span></button>
+              <button type="button" class="lc-act" data-save="1">◇ 收藏</button>
+              <button type="button" class="lc-act" data-comment="老房改造">评论</button>
+            </div>
+          </article>
+
+          <article class="lc-card lc-video-card">
+            <div class="lc-cover">
+              <svg viewBox="0 0 400 225" role="img" aria-label="人物访谈现场，两位对坐者与录音设备构图">
+                <rect width="400" height="225" fill="#141d24"/>
+                <circle cx="120" cy="96" r="30" fill="#2d4752"/>
+                <path d="M96 150 q24 -40 48 0" fill="#2d4752"/>
+                <circle cx="286" cy="90" r="26" fill="#3b4f45"/>
+                <path d="M264 142 q22 -36 44 0" fill="#3b4f45"/>
+                <rect x="186" y="88" width="26" height="44" rx="13" fill="#00e5a0" opacity=".8"/>
+                <rect x="194" y="130" width="10" height="26" fill="#2a4a40"/>
+                <rect x="140" y="176" width="120" height="7" rx="3.5" fill="#2a4a40"/>
+                <circle cx="60" cy="180" r="10" fill="none" stroke="#ff5c39" stroke-width="2"/>
+                <circle cx="340" cy="60" r="16" fill="none" stroke="#00e5a0" stroke-width="1.6" opacity=".6"/>
+              </svg>
+              <span class="lc-cover-dur">24:31</span>
+              <span class="lc-play" aria-hidden="true"><span>▶</span></span>
+            </div>
+            <span class="lc-tag">人物访谈</span>
+            <h3>访谈录：把菜市场拍成纪录片的第 400 天</h3>
+            <p>老K不熬夜聊他为什么坚持拍摊主，以及一支短片从取材到成片的完整过程。</p>
+            <div class="lc-meta"><span>老K不熬夜</span><span>播放 18.2 万</span></div>
+            <div class="lc-actions">
+              <button type="button" class="lc-act" data-like="1">♡ 点赞 <span class="lc-like-count">7,960</span></button>
+              <button type="button" class="lc-act" data-save="1">◇ 收藏</button>
+              <button type="button" class="lc-act" data-comment="访谈录">评论</button>
+            </div>
+          </article>
+
+          <article class="lc-card lc-video-card">
+            <div class="lc-cover">
+              <svg viewBox="0 0 400 225" role="img" aria-label="户外露营篝火与帐篷夜景，星空清晰">
+                <rect width="400" height="225" fill="#0b1720"/>
+                <g fill="#cfe9ff">
+                  <circle cx="40" cy="34" r="1.6"/><circle cx="96" cy="20" r="1.2"/><circle cx="150" cy="42" r="1.8"/>
+                  <circle cx="220" cy="26" r="1.4"/><circle cx="300" cy="38" r="1.7"/><circle cx="356" cy="22" r="1.3"/>
+                  <circle cx="330" cy="66" r="1.1"/><circle cx="70" cy="70" r="1.2"/>
+                </g>
+                <path d="M0 168 Q120 130 220 160 T400 150 V225 H0 Z" fill="#12241e"/>
+                <path d="M120 178 L170 118 L220 178 Z" fill="#1f4a3a"/>
+                <path d="M150 178 L170 142 L190 178 Z" fill="#2b6b52"/>
+                <ellipse cx="286" cy="176" rx="34" ry="12" fill="#3a2a14"/>
+                <path d="M276 168 q-8 -22 10 -30 q6 16 14 22 q-10 8 -24 8Z" fill="#ff8a3d"/>
+                <path d="M282 166 q-4 -12 6 -18 q3 10 8 14 q-7 4 -14 4Z" fill="#ffd166"/>
+                <path d="M0 196 H400" stroke="#1f4a3a" stroke-width="2"/>
+              </svg>
+              <span class="lc-cover-dur">15:09</span>
+              <span class="lc-play" aria-hidden="true"><span>▶</span></span>
+            </div>
+            <span class="lc-tag">户外活动</span>
+            <h3>一次没有信号的 48 小时：山谷露营全记录</h3>
+            <p>从装备清单到雨天应急，把第一次独自露营的真实体验完整拍下来。</p>
+            <div class="lc-meta"><span>松野来信</span><span>播放 16.7 万</span></div>
+            <div class="lc-actions">
+              <button type="button" class="lc-act" data-like="1">♡ 点赞 <span class="lc-like-count">7,120</span></button>
+              <button type="button" class="lc-act" data-save="1">◇ 收藏</button>
+              <button type="button" class="lc-act" data-comment="山谷露营">评论</button>
+            </div>
+          </article>
+
+          <article class="lc-card lc-video-card">
+            <div class="lc-cover">
+              <svg viewBox="0 0 400 225" role="img" aria-label="手作陶艺工作台特写，拉坯机与陶土器物排列">
+                <rect width="400" height="225" fill="#241c16"/>
+                <rect x="0" y="150" width="400" height="75" fill="#3a2c22"/>
+                <rect x="120" y="140" width="160" height="14" rx="5" fill="#4a382b"/>
+                <circle cx="200" cy="140" r="44" fill="#5a4130"/>
+                <ellipse cx="200" cy="140" rx="44" ry="14" fill="#7a5a42"/>
+                <path d="M164 128 q36 -26 72 0 q-8 16 -36 16 q-28 0 -36 -16Z" fill="#8f6a4c"/>
+                <g fill="#6b513c">
+                  <rect x="56" y="112" width="34" height="34" rx="8"/>
+                  <rect x="96" y="122" width="24" height="24" rx="6"/>
+                  <rect x="308" y="116" width="30" height="30" rx="7"/>
+                </g>
+                <circle cx="330" cy="60" r="20" fill="#ffd166" opacity=".7"/>
+                <path d="M0 186 H400" stroke="#4a382b" stroke-width="2" stroke-dasharray="8 8"/>
+              </svg>
+              <span class="lc-cover-dur">09:26</span>
+              <span class="lc-play" aria-hidden="true"><span>▶</span></span>
+            </div>
+            <span class="lc-tag">手作DIY</span>
+            <h3>从一团泥到一只杯子：陶艺入门完整流程</h3>
+            <p>拉坯、修坯、上釉、烧制，跟着手作人完成第一次陶艺作品，附避坑提示。</p>
+            <div class="lc-meta"><span>泥巴研究所</span><span>播放 14.3 万</span></div>
+            <div class="lc-actions">
+              <button type="button" class="lc-act" data-like="1">♡ 点赞 <span class="lc-like-count">6,540</span></button>
+              <button type="button" class="lc-act" data-save="1">◇ 收藏</button>
+              <button type="button" class="lc-act" data-comment="陶艺入门">评论</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== S4 专题企划 ===== -->
+    <section class="lc-section" id="lc-topics" aria-labelledby="lc-topics-heading">
+      <div class="lc-container">
+        <div class="lc-section-head">
+          <div>
+            <span class="lc-eyebrow">专题企划</span>
+            <h2 class="lc-h2" id="lc-topics-heading">老虎菜黑料网年度企划</h2>
+            <p>围绕真实生活与创作现场，官方持续运营的三大专题，以精品内容构建有影响力的内容生态。</p>
+          </div>
+        </div>
+        <div class="lc-topic-grid">
+          <article class="lc-card lc-topic-card">
+            <span class="lc-topic-status">更新至第 12 集 · 连载中</span>
+            <h3>城市夜行 · 第三季</h3>
+            <p>走进 8 座城市的深夜现场，记录那些在白天之后才开始生活的人。</p>
+            <ul class="lc-topic-list">
+              <li>夜行成都：凌晨三点的火锅摊与守夜人</li>
+              <li>夜行西安：城墙根下的吉他手</li>
+              <li>夜行杭州：24 小时便利店的凌晨班</li>
+            </ul>
+          </article>
+          <article class="lc-card lc-topic-card">
+            <span class="lc-topic-status">已完结 · 共 6 期</span>
+            <h3>老虎菜实验室</h3>
+            <p>把拍摄技巧拆成可练习的步骤，让每个创作者都能从零开始做出成片。</p>
+            <ul class="lc-topic-list">
+              <li>手机运镜入门：6 个低角度镜头一次讲透</li>
+              <li>自然光人像：窗边一支灯的三种用法</li>
+              <li>剪辑节奏：让 3 分钟短片不拖沓的 5 个办法</li>
+            </ul>
+          </article>
+          <article class="lc-card lc-topic-card">
+            <span class="lc-topic-status">征集中 · 报名进行中</span>
+            <h3>真实的力量 · 年度创作者计划</h3>
+            <p>面向所有社区创作者征集真实故事，入选作品将获得官方推荐与制作支持。</p>
+            <ul class="lc-topic-list">
+              <li>投稿要求：原创纪实类短片，时长 3 分钟以上</li>
+              <li>入选权益：首页推荐位、流量扶持与年度展映</li>
+              <li>征集时间：即日起至 2026 年 12 月 31 日</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== S5 品牌解析 长文（≥800字） ===== -->
+    <section class="lc-section lc-deep" id="lc-deep" aria-labelledby="lc-deep-heading">
+      <div class="lc-container lc-deep-wrap">
+        <aside class="lc-deep-side">
+          <span class="lc-eyebrow">品牌故事</span>
+          <h2 class="lc-h2" id="lc-deep-heading">关于老虎菜黑料网</h2>
+          <p>一支品牌短片，四个关键词，讲清楚我们为什么做视频、为谁做视频、以及准备做多久。</p>
+          <div class="lc-cover">
+            <svg viewBox="0 0 480 270" role="img" aria-label="品牌故事插图：逐渐亮起的视频播放列表与向外延伸的光线">
+              <rect width="480" height="270" fill="#101b19"/>
+              <g transform="translate(48 42)">
+                <rect width="240" height="60" rx="10" fill="#162823" stroke="#25443b"/>
+                <circle cx="30" cy="30" r="14" fill="#00e5a0" opacity=".85"/>
+                <path d="M26 24 L38 30 L26 36 Z" fill="#04150f"/>
+                <rect x="58" y="20" width="120" height="7" rx="3.5" fill="#2c4a43"/>
+                <rect x="58" y="36" width="78" height="5" rx="2.5" fill="#22392f"/>
+                <rect y="78" width="240" height="60" rx="10" fill="#162823" stroke="#25443b"/>
+                <circle cx="30" cy="108" r="14" fill="#ff5c39" opacity=".75"/>
+                <path d="M26 102 L38 108 L26 114 Z" fill="#1e0b05"/>
+                <rect x="58" y="98" width="140" height="7" rx="3.5" fill="#2c4a43"/>
+                <rect x="58" y="114" width="60" height="5" rx="2.5" fill="#22392f"/>
+                <rect y="156" width="240" height="60" rx="10" fill="#162823" stroke="#00e5a0"/>
+                <circle cx="30" cy="186" r="14" fill="#00e5a0"/>
+                <path d="M26 180 L38 186 L26 192 Z" fill="#04150f"/>
+                <rect x="58" y="176" width="100" height="7" rx="3.5" fill="#2c4a43"/>
+                <rect x="58" y="192" width="150" height="5" rx="2.5" fill="#22392f"/>
+              </g>
+              <g stroke="#00e5a0" opacity=".5">
+                <path d="M330 90 L452 46"/>
+                <path d="M330 140 L468 140"/>
+                <path d="M330 190 L452 234"/>
+              </g>
+              <circle cx="452" cy="46" r="4" fill="#00e5a0"/>
+              <circle cx="468" cy="140" r="4" fill="#ff5c39"/>
+              <circle cx="452" cy="234" r="4" fill="#00e5a0"/>
+            </svg>
+          </div>
+          <a class="lc-btn lc-btn--sm" href="#lc-authors">认识我们的创作者</a>
+        </aside>
+
+        <div class="lc-deep-body">
+          <h3>一、从一间剪辑室开始的视频品牌</h3>
+          <p>老虎菜黑料网不是一个突然出现的名字。它最早只是四个人共用的一间剪辑室：两张桌子、三台旧机器、一面贴满分镜草稿的墙。那时候我们给企业拍宣传片，也给朋友拍婚礼，但真正让我们反复回看的，都是那些没有被安排过的瞬间——摊主收摊时抖落围裙的动作、凌晨便利店店员把热饮摆正的姿势、手作人吹掉陶坯灰尘时的那一口气。我们意识到，视频最有力量的部分，往往不是被设计出来的，而是被认真记录下来的。2019 年，老虎菜黑料网以品牌官方网站的形态上线，第一批上线的 27 支原创短片全部来自这间剪辑室，主题只有一个：真实的生活现场。</p>
+          <p>从那时起，我们给自己定了一条并不讨巧的规则：不追热点，只追具体的现场。为了拍一支 18 分钟的《夜行成都》，团队在火锅摊旁蹲了整整十一个晚上；为了完成《把菜市场拍成纪录片的第 400 天》，创作者老K不熬夜每周固定去同一个菜场，和摊主从陌生聊到能互相叫出名字。这些作品播放量并不是最高的，但它们构成了老虎菜黑料网最扎实的底座——一个以原创、正版、高清为标准的视频内容平台，也是一群创作者彼此认得出来的社区。</p>
+
+          <h3>二、关键词解析：老虎菜黑料网是什么，以及它不是什么</h3>
+          <p>很多人第一次听到“老虎菜黑料网”会误以为这是一个聚合类站点。这里需要认真解释一次：老虎菜黑料网是一个由企业持续运营的原创视频品牌官网，主打真实记录与经验分享，所有标注“官方发布”的内容均经过编辑部审核，全部为原创或已获授权的正版内容，画质以高清为标准。我们不搬运、不拼接、不做标题党式的剪辑；页面上的“黑料”二字是品牌早期社区里的一个自嘲梗——创作者们把镜头里那些不够体面、不够完美、却特别真实的边角料称为“黑料”，久而久之成了社区内部的一种默契：先把真实的东西拍下来，再谈好不好看。</p>
+          <p>因此，老虎菜黑料网的核心并不是“揭秘”，而是“留存”。我们留存普通人的手艺、留存城市被忽略的时段、留存一次改造从图纸到入住的全过程、留存一场访谈里那句没来得及修饰的真心话。这些内容被组织进专题、榜单和视频流里，形成可被检索、可被收藏、可被反复观看的内容生态。对观众来说，这里是能找到“看完不空”的视频的地方；对创作者来说，这里是一个尊重作品、按作品说话的垂直领域平台；对合作方来说，这里是一个口碑稳定、用户画像清晰、值得信赖的内容合作方。</p>
+
+          <h3>三、内容生态与创作方法论</h3>
+          <p>老虎菜黑料网的内容生态由三条线交织而成。第一条线是“现场线”，以城市探索、日常记录、在地文化为主，强调在场感与持续性，一个选题往往要跟拍数周甚至数月。第二条线是“方法线”，以教程干货、实用技巧、深度测评为主，我们把拍摄、剪辑、选题、设备使用中的经验拆成可执行的步骤，让社区里的新手也能按图索骥。第三条线是“人物线”，以人物访谈、创作者故事、品牌故事为主，用长对话与幕后素材还原一个作品背后的判断与犹豫。三条线并非彼此隔离，很多爆款作品恰恰是三条线的交叉点：一个跟拍三个月的现场，被整理成一套方法，最后留下一个真实的人。</p>
+          <p>在制作标准上，我们坚持几个看起来有点固执的选择：尽量使用自然光、尽量保留环境声、尽量不写剧本式旁白。因为我们相信，观众对“被表演的真实”非常敏感，一次刻意的煽情，可能抵消十次真诚的记录。为此，老虎菜黑料网建立了创作者认证与内容审核机制，官方发布的内容需要经过事实核查、授权确认与画面质量标准审核；社区创作者上传的作品则通过标签、专题与榜单获得曝光，形成“作品—反馈—再创作”的良性循环。这种机制并不追求爆发式增长，但它让我们在多年持续运营中保住了两样东西：口碑，以及创作者愿意留下来的理由。</p>
+
+          <h3>四、我们想长期做的事</h3>
+          <p>未来三年，老虎菜黑料网会把重心放在两件事上。第一件是“记录者培养”：通过老虎菜实验室的系列教程、年度创作者计划与线下工作坊，让更多普通人具备把身边故事拍完整的能力，我们提供选题建议、拍摄清单、剪辑模板与官方推荐位，不收取报名费用。第二件是“长期档案”：围绕城市、手艺与日常三个方向建立可持续更新的内容档案，每一条档案都保留完整的拍摄时间、地点授权与创作者署名，确保内容可被引用、可被追溯。这些工作不热闹，但符合我们对自己的定位——一个以用户至上、以品质为底线、以社会责任为长期约束的视频品牌。</p>
+          <p>我们也清楚自己的局限：不是所有题材都适合我们，不是所有热点都值得追，镜头也不总是能拍到最好的那一个瞬间。所以老虎菜黑料网愿意把姿态放低一点，把节奏放慢一点。我们更希望被记住的不是某一条视频的数字，而是当有人想认真看点什么、想认真拍点什么的时候，会先想到这个名字。这大概就是“真实、温暖、有力量”这几个词，在我们这里最具体的含义。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== S6 创作者矩阵 双列简介 ===== -->
+    <section class="lc-section" id="lc-authors" aria-labelledby="lc-authors-heading">
+      <div class="lc-container">
+        <div class="lc-section-head">
+          <div>
+            <span class="lc-eyebrow">创作者社区</span>
+            <h2 class="lc-h2" id="lc-authors-heading">老虎菜黑料网的创作者们</h2>
+            <p>他们来自不同城市、不同职业，但都相信认真记录的价值。点击头像可查看创作者档案。</p>
+          </div>
+          <a class="lc-btn lc-btn--sm" href="#lc-cta">申请加入创作者矩阵</a>
+        </div>
+        <div class="lc-author-grid">
+          <article class="lc-card lc-author-card">
+            <button type="button" class="lc-avatar lc-avatar--a" data-author="阿葱的镜头" aria-label="查看创作者阿葱的镜头的档案">阿</button>
+            <div>
+              <h3>阿葱的镜头</h3>
+              <span class="lc-author-field">城市探索 · 夜景纪实</span>
+              <p>成都本地创作者，跟拍夜行专题三年，擅长在低照度环境里保留人物质感。作品节奏偏慢，但几乎每一支都有完整的现场声与人物口述，是社区里公认“最舍得等光线”的人。</p>
+              <div class="lc-author-stats"><span>作品 46</span><span>粉丝 12.8 万</span><span>连续更新 214 周</span></div>
+            </div>
+          </article>
+          <article class="lc-card lc-author-card">
+            <button type="button" class="lc-avatar lc-avatar--b" data-author="老K不熬夜" aria-label="查看创作者老K不熬夜的档案">K</button>
+            <div>
+              <h3>老K不熬夜</h3>
+              <span class="lc-author-field">人物访谈 · 纪录短片</span>
+              <p>前媒体记者，现全职做社区影像。把菜市场拍成纪录片系列已更新到第 400 天，擅长用长对话打开被拍摄者，作品里常有大量未剪辑的停顿，被观众称为“愿意把时间还给受访者的人”。</p>
+              <div class="lc-author-stats"><span>作品 38</span><span>粉丝 21.4 万</span><span>年度创作者 2025</span></div>
+            </div>
+          </article>
+          <article class="lc-card lc-author-card">
+            <button type="button" class="lc-avatar lc-avatar--c" data-author="小满手记" aria-label="查看创作者小满手记的档案">满</button>
+            <div>
+              <h3>小满手记</h3>
+              <span class="lc-author-field">教程干货 · 拍摄方法</span>
+              <p>摄影讲师出身，老虎菜实验室常驻作者。擅长把复杂的运镜与布光拆成三步以内的练习，附参数与作业清单，社区新人最常收藏的就是她的教程合集，被称为“看完真的拍得出来”。</p>
+              <div class="lc-author-stats"><span>作品 62</span><span>粉丝 17.6 万</span><span>教程合集 9 套</span></div>
+            </div>
+          </article>
+          <article class="lc-card lc-author-card">
+            <button type="button" class="lc-avatar lc-avatar--d" data-author="晚风食记" aria-label="查看创作者晚风食记的档案">晚</button>
+            <div>
+              <h3>晚风食记</h3>
+              <span class="lc-author-field">美食烹饪 · 深度测评</span>
+              <p>从菜市场到后厨的长期记录者，做过 30 余期食材供应链探访。她的视频不追求成品摆盘，更愿意花时间拍下备料、清洗与收档的过程，把“一顿饭背后有多少人”这件事讲清楚。</p>
+              <div class="lc-author-stats"><span>作品 54</span><span>粉丝 15.2 万</span><span>专题 4 个</span></div>
+            </div>
+          </article>
+          <article class="lc-card lc-author-card">
+            <button type="button" class="lc-avatar lc-avatar--e" data-author="木木改造中" aria-label="查看创作者木木改造中的档案">木</button>
+            <div>
+              <h3>木木改造中</h3>
+              <span class="lc-author-field">生活方式 · 家居改造</span>
+              <p>非专业出身的改造爱好者，用 12 期视频完整记录了一间 60 ㎡ 老房子从测量到入住的全过程。她会把预算表、踩坑清单和失败镜头一起放出来，社区评价是“少见的实诚”。</p>
+              <div class="lc-author-stats"><span>作品 29</span><span>粉丝 9.8 万</span><span>连载 12 期完结</span></div>
+            </div>
+          </article>
+          <article class="lc-card lc-author-card">
+            <button type="button" class="lc-avatar lc-avatar--f" data-author="松野来信" aria-label="查看创作者松野来信的档案">松</button>
+            <div>
+              <h3>松野来信</h3>
+              <span class="lc-author-field">户外活动 · 治愈影像</span>
+              <p>长期在西南山区行走，专注无信号环境的户外记录。作品常以第一视角完成，保留风声与脚步，很少配乐，被观众当作“周末放空用的视频”，也是平台里完播率最高的作者之一。</p>
+              <div class="lc-author-stats"><span>作品 33</span><span>粉丝 11.5 万</span><span>户外季 5 季</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== S6 用户评价 双列短评 ===== -->
+    <section class="lc-section lc-section--tight" id="lc-reviews" aria-labelledby="lc-reviews-heading">
+      <div class="lc-container">
+        <div class="lc-section-head">
+          <div>
+            <span class="lc-eyebrow">社区口碑</span>
+            <h2 class="lc-h2" id="lc-reviews-heading">来自社区的真实评价</h2>
+            <p>评价来自社区账号与作品页留言，未做删改。口碑是老虎菜黑料网最在意的数据。</p>
+          </div>
+        </div>
+        <div class="lc-comment-grid">
+          <article class="lc-card lc-comment-card">
+            <div class="lc-comment-top">
+              <span class="lc-comment-avatar" style="background:#1f5e4c;color:#b6ffe0">林</span>
+              <span class="lc-comment-name">林间小筑</span>
+              <span class="lc-comment-stars">★★★★★</span>
+            </div>
+            <p>《夜行成都》看完直接失眠。不是因为煽情，是因为太像我家楼下那条街了，连摊位摆的位置都对得上。这种片子放在别的平台很容易被剪成 30 秒，只有这里让它完整地待了 18 分钟。</p>
+            <div class="lc-comment-foot"><span>来自城市探索专题</span><span>2026-11-18</span></div>
+          </article>
+          <article class="lc-card lc-comment-card">
+            <div class="lc-comment-top">
+              <span class="lc-comment-avatar" style="background:#5a3a1a;color:#ffd9a8">陈</span>
+              <span class="lc-comment-name">陈小满的学徒</span>
+              <span class="lc-comment-stars">★★★★☆</span>
+            </div>
+            <p>新手拍视频一直不敢运镜，跟着老虎菜实验室的运镜教程练了三天，第一次拍出自己满意的片子。唯一的建议是教程能不能多几套参数对照表，我这种记性差的容易忘。</p>
+            <div class="lc-comment-foot"><span>来自教程干货</span><span>2026-11-12</span></div>
+          </article>
+          <article class="lc-card lc-comment-card">
+            <div class="lc-comment-top">
+              <span class="lc-comment-avatar" style="background:#1c3f6e;color:#c2e0ff">周</span>
+              <span class="lc-comment-name">周三值班</span>
+              <span class="lc-comment-stars">★★★★★</span>
+            </div>
+            <p>作为合作方补充一句：他们的内容审核是真的细，我们提供的素材清单被来回核对了三遍授权，虽然麻烦，但成片质量确实稳，企业这边交给他们放心。</p>
+            <div class="lc-comment-foot"><span>来自合作伙伴</span><span>2026-11-06</span></div>
+          </article>
+          <article class="lc-card lc-comment-card">
+            <div class="lc-comment-top">
+              <span class="lc-comment-avatar" style="background:#4a2a5e;color:#eccfff">阿</span>
+              <span class="lc-comment-name">阿木的邻居</span>
+              <span class="lc-comment-stars">★★★★★</span>
+            </div>
+            <p>追完了木木的 12 期改造，最打动我的是她大方展示翻车那期。装修类内容看得多了，愿意把多花的钱和做错的判断一起讲出来的，真的很少。</p>
+            <div class="lc-comment-foot"><span>来自家居改造</span><span>2026-10-29</span></div>
+          </article>
+          <article class="lc-card lc-comment-card">
+            <div class="lc-comment-top">
+              <span class="lc-comment-avatar" style="background:#2a4a2a;color:#c8ffd8">野</span>
+              <span class="lc-comment-name">野路徒步中</span>
+              <span class="lc-comment-stars">★★★★☆</span>
+            </div>
+            <p>户外视频里少见的不吵不闹，风声和脚步声都保留着。就是更新慢，等下一季等得有点久，官方能不能给个固定更新时间表。</p>
+            <div class="lc-comment-foot"><span>来自户外活动</span><span>2026-10-21</span></div>
+          </article>
+          <article class="lc-card lc-comment-card">
+            <div class="lc-comment-top">
+              <span class="lc-comment-avatar" style="background:#5e2a2a;color:#ffd0c8">麦</span>
+              <span class="lc-comment-name">麦田守望</span>
+              <span class="lc-comment-stars">★★★★★</span>
+            </div>
+            <p>投过一次稿，被退回时收到了很具体的修改意见，不是模板回复。后来按建议重剪了一版顺利上线，这件事让我对这个平台的信任度一下子上来了。</p>
+            <div class="lc-comment-foot"><span>来自投稿创作者</span><span>2026-10-15</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== S7 企业动态 ===== -->
+    <section class="lc-section" id="lc-news" aria-labelledby="lc-news-heading">
+      <div class="lc-container">
+        <div class="lc-section-head">
+          <div>
+            <span class="lc-eyebrow">企业动态</span>
+            <h2 class="lc-h2" id="lc-news-heading">老虎菜黑料网官方发布</h2>
+            <p>品牌活动、内容更新与合作进展，统一在这里官方发布。</p>
+          </div>
+        </div>
+        <div class="lc-news-list">
+          <div class="lc-news-item">
+            <div class="lc-news-date">2026-11-22</div>
+            <h3>城市夜行第三季上线，首周开放限时高清下载</h3>
+            <p>第三季共 8 集，首周开放 4K 版本官方下载，会员与认证创作者可优先获取素材包。</p>
+          </div>
+          <div class="lc-news-item">
+            <div class="lc-news-date">2026-11-10</div>
+            <h3>年度创作者计划启动报名，新增 20 个推荐名额</h3>
+            <p>面向社区征集原创纪实短片，入选作品将获得首页推荐与制作扶持，报名通道开放至年底。</p>
+          </div>
+          <div class="lc-news-item">
+            <div class="lc-news-date">2026-10-28</div>
+            <h3>老虎菜实验室教程合集更新至第 9 套</h3>
+            <p>新增「自然光人像」与「剪辑节奏」两套教程，附可下载的参数卡与练习清单。</p>
+          </div>
+          <div class="lc-news-item">
+            <div class="lc-news-date">2026-10-12</div>
+            <h3>与三家区域文旅机构达成内容合作</h3>
+            <p>围绕在地文化纪录展开联合企划，首批 6 支合作短片预计于 12 月陆续上线。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== S7 合作品牌 ===== -->
+    <section class="lc-section lc-section--tight" aria-labelledby="lc-partner-heading">
+      <div class="lc-container">
+        <div class="lc-section-head">
+          <div>
+            <span class="lc-eyebrow">合作与伙伴</span>
+            <h2 class="lc-h2" id="lc-partner-heading">与我们一起做内容的伙伴</h2>
+          </div>
+        </div>
+        <div class="lc-partner-grid">
+          <div class="lc-partner"><strong>山海影像社</strong><span>联合出品 · 城市纪录</span></div>
+          <div class="lc-partner"><strong>城南菜场计划</strong><span>内容共建 · 社区纪实</span></div>
+          <div class="lc-partner"><strong>拾光工作室</strong><span>后期支持 · 影像修复</span></div>
+          <div class="lc-partner"><strong>野径户外</strong><span>场景合作 · 户外季</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== S7 FAQ ===== -->
+    <section class="lc-section" id="lc-faq" aria-labelledby="lc-faq-heading">
+      <div class="lc-container">
+        <div class="lc-section-head">
+          <div>
+            <span class="lc-eyebrow">帮助中心</span>
+            <h2 class="lc-h2" id="lc-faq-heading">关于老虎菜黑料网的常见问题</h2>
+          </div>
+        </div>
+        <div class="lc-faq">
+          <details open>
+            <summary>老虎菜黑料网是怎样的平台？</summary>
+            <p>老虎菜黑料网是一个以原创视频为核心的品牌官网与内容社区，主打真实记录、经验分享与人物访谈。所有标注“官方发布”的内容均为原创或已获授权，画质以高清为标准，平台由企业持续运营并定期更新。</p>
+          </details>
+          <details>
+            <summary>「黑料」两个字是什么意思？</summary>
+            <p>这是早期社区内部的自嘲梗。创作者把镜头里那些不完美、不够体面却特别真实的边角素材称为“黑料”，久而久之成了社区默契：先把真实拍下来，再谈好不好看。它不代表任何揭秘或负面内容。</p>
+          </details>
+          <details>
+            <summary>如何投稿自己的作品？</summary>
+            <p>点击页面上方或底部的“上传作品”按钮，填写作品基本信息与授权声明后提交。编辑部通常在 5 个工作日内给出审核结果，未通过的作品会附上具体修改建议。</p>
+          </details>
+          <details>
+            <summary>平台上的视频可以下载吗？</summary>
+            <p>标注“官方发布”的部分内容会限时开放高清下载，具体以下载入口显示为准。所有下载内容仅限个人学习与收藏，不得二次上传或商业使用，详情见作品页的授权说明。</p>
+          </details>
+          <details>
+            <summary>年度创作者计划的报名条件是什么？</summary>
+            <p>面向所有社区创作者，作品需为原创纪实类短片或专题，时长 3 分钟以上，有完整的拍摄授权。报名免费，入选后可获得首页推荐、流量扶持与年度展映机会。</p>
+          </details>
+          <details>
+            <summary>如何与平台展开内容合作？</summary>
+            <p>可通过页面底部的联系方式提交合作意向，注明合作类型（联合出品、场景合作、后期支持等）。我们会在收到信息后安排对接，并在评估内容方向与制作标准后给出方案。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== S7 投稿 CTA ===== -->
+    <section class="lc-section lc-section--tight" id="lc-cta">
+      <div class="lc-container">
+        <div class="lc-cta-band">
+          <div>
+            <span class="lc-eyebrow">创作入口</span>
+            <h2>把你的现场，放进老虎菜黑料网</h2>
+            <p>无论是一段跟拍三个月的纪录，还是一次手机拍下的日常，只要真实、用心、有细节，我们都愿意给它一个被完整看完的位置。</p>
+          </div>
+          <div class="lc-actions" style="margin:0">
+            <button type="button" class="lc-btn lc-btn--primary" id="lc-cta-upload">上传作品</button>
+            <button type="button" class="lc-btn" id="lc-cta-contact">联系编辑部</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== 页脚 ===== -->
+  <footer class="lc-footer">
+    <div class="lc-container">
+      <div class="lc-footer-grid">
+        <div class="lc-footer-brand">
+          <div class="lc-brand" aria-hidden="true">
+            <span class="lc-brand-mark">虎</span>
+            <span>
+              <span class="lc-brand-name">老虎菜黑料网</span>
+              <span class="lc-brand-sub">原创视频品牌官网</span>
+            </span>
+          </div>
+          <p>老虎菜黑料网官方网站，由企业持续运营的原创视频内容平台。我们以真实记录为底色，以品质与口碑为底线，与创作者和伙伴共建有影响力的内容生态。</p>
+        </div>
+        <div>
+          <h4>内容</h4>
+          <ul class="lc-footer-links">
+            <li><a href="#lc-videos">精品内容</a></li>
+            <li><a href="#lc-topics">专题企划</a></li>
+            <li><a href="#lc-deep">品牌故事</a></li>
+            <li><a href="#lc-authors">创作者矩阵</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>关于</h4>
+          <ul class="lc-footer-links">
+            <li><a href="#lc-news">企业动态</a></li>
+            <li><a href="#lc-reviews">社区口碑</a></li>
+            <li><a href="#lc-faq">帮助中心</a></li>
+            <li><a href="#lc-cta">合作与投稿</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>联系</h4>
+          <ul class="lc-footer-links">
+            <li><a href="#lc-cta">编辑部邮箱</a></li>
+            <li><a href="#lc-cta">内容合作通道</a></li>
+            <li><a href="#lc-faq">授权与版权说明</a></li>
+            <li><a href="#lc-cta">用户反馈</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="lc-footer-bottom">
+        <span>© 2026 老虎菜黑料网 版权所有 · 持续运营中</span>
+        <span>备案号：示例备案 2026000000 号 · 原创内容受版权保护</span>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="lc-to-top" id="lc-to-top" aria-label="回到顶部">↑</button>
+  <div class="lc-toast" id="lc-toast" role="status" aria-live="polite"></div>
+
+  <!-- 通用弹窗 -->
+  <div class="lc-modal" id="lc-modal" role="dialog" aria-modal="true" aria-labelledby="lc-modal-title">
+    <div class="lc-modal-backdrop" data-close-modal></div>
+    <div class="lc-modal-panel">
+      <button type="button" class="lc-modal-close" data-close-modal aria-label="关闭弹窗">✕</button>
+      <h3 id="lc-modal-title">提示</h3>
+      <p id="lc-modal-desc">内容加载中。</p>
+      <div id="lc-modal-body"></div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      "use strict";
+
+      var toastEl = document.getElementById("lc-toast");
+      var toastTimer = null;
+      function toast(msg) {
+        if (!toastEl) return;
+        toastEl.textContent = msg;
+        toastEl.classList.add("is-show");
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(function () {
+          toastEl.classList.remove("is-show");
+        }, 2400);
+      }
+
+      /* ---------- 移动端导航折叠 ---------- */
+      var nav = document.getElementById("lc-nav");
+      var navToggle = document.getElementById("lc-nav-toggle");
+      if (navToggle && nav) {
+        navToggle.addEventListener("click", function () {
+          var open = nav.classList.toggle("is-open");
+          navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+          navToggle.textContent = open ? "✕" : "☰";
+        });
+        nav.addEventListener("click", function (e) {
+          if (e.target.closest(".lc-nav-link")) {
+            nav.classList.remove("is-open");
+            navToggle.setAttribute("aria-expanded", "false");
+            navToggle.textContent = "☰";
+          }
+        });
+      }
+
+      /* ---------- 搜索反馈 ---------- */
+      var searchInput = document.getElementById("lc-search-input");
+      var searchBtn = document.getElementById("lc-search-btn");
+      var searchFeedback = document.getElementById("lc-search-feedback");
+      var searchData = [
+        "城市夜行 · 第三季（专题）",
+        "手机运镜入门：6 个低角度镜头一次讲透（教程）",
+        "阿葱的镜头（创作者）",
+        "老K不熬夜（创作者）",
+        "老虎菜实验室（专题）",
+        "60 ㎡ 老房改造完结篇（视频）",
+        "山谷露营全记录（视频）",
+        "陶艺入门完整流程（视频）"
+      ];
+      function doSearch() {
+        if (!searchFeedback) return;
+        var q = (searchInput && searchInput.value || "").trim();
+        if (!q) {
+          searchFeedback.innerHTML = "试试输入「夜行」「运镜」「改造」等关键词。";
+          searchFeedback.classList.add("is-show");
+          return;
+        }
+        var hits = searchData.filter(function (item) {
+          return item.indexOf(q) !== -1;
+        });
+        if (hits.length) {
+          searchFeedback.innerHTML = "找到 <strong>" + hits.length + "</strong> 条与「" + escapeHtml(q) + "」相关的内容：<br>" +
+            hits.slice(0, 4).map(function (h) { return "· " + escapeHtml(h); }).join("<br>");
+        } else {
+          searchFeedback.innerHTML = "暂时没有「<strong>" + escapeHtml(q) + "</strong>」的直接结果，可尝试更短的关键词，或前往帮助中心反馈。";
+        }
+        searchFeedback.classList.add("is-show");
+      }
+      function escapeHtml(s) {
+        return String(s).replace(/[&<>"']/g, function (c) {
+          return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+        });
+      }
+      if (searchBtn) searchBtn.addEventListener("click", doSearch);
+      if (searchInput) {
+        searchInput.addEventListener("keydown", function (e) {
+          if (e.key === "Enter") { e.preventDefault(); doSearch(); }
+        });
+        searchInput.addEventListener("input", function () {
+          if (searchFeedback && searchFeedback.classList.contains("is-show")) doSearch();
+        });
+      }
+      document.addEventListener("click", function (e) {
+        if (searchFeedback && !e.target.closest(".lc-search")) {
+          searchFeedback.classList.remove("is-show");
+        }
+      });
+
+      /* ---------- 点赞 / 收藏 ---------- */
+      function parseCount(text) {
+        var t = String(text).replace(/,/g, "");
+        if (t.indexOf("万") !== -1) return Math.round(parseFloat(t) * 10000);
+        return parseInt(t, 10) || 0;
+      }
+      function formatCount(n) {
+        if (n >= 10000) return (n / 10000).toFixed(1).replace(/\.0$/, "") + "万";
+        return String(n);
+      }
+      document.querySelectorAll("[data-like]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var countEl = btn.querySelector(".lc-like-count");
+          if (!countEl) return;
+          var current = parseCount(countEl.textContent);
+          var liked = btn.classList.toggle("is-liked");
+          var next = liked ? current + 1 : Math.max(0, current - 1);
+          countEl.textContent = formatCount(next);
+          btn.childNodes[0].nodeValue = liked ? "♥ 已赞 " : "♡ 点赞 ";
+          toast(liked ? "已点赞，感谢你的支持" : "已取消点赞");
+        });
+      });
+      document.querySelectorAll("[data-save]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var saved = btn.classList.toggle("is-saved");
+          btn.textContent = saved ? "◆ 已收藏" : "◇ 收藏";
+          toast(saved ? "已加入收藏，可在个人页查看" : "已取消收藏");
+        });
+      });
+
+      /* ---------- 弹窗 ---------- */
+      var modal = document.getElementById("lc-modal");
+      var modalTitle = document.getElementById("lc-modal-title");
+      var modalDesc = document.getElementById("lc-modal-desc");
+      var modalBody = document.getElementById("lc-modal-body");
+      function openModal(title, desc, bodyHtml) {
+        if (!modal) return;
+        modalTitle.textContent = title;
+        modalDesc.textContent = desc || "";
+        modalBody.innerHTML = bodyHtml || "";
+        modal.classList.add("is-open");
+        var firstInput = modalBody.querySelector("input,textarea,button");
+        if (firstInput) firstInput.focus();
+      }
+      function closeModal() {
+        if (modal) modal.classList.remove("is-open");
+      }
+      if (modal) {
+        modal.querySelectorAll("[data-close-modal]").forEach(function (el) {
+          el.addEventListener("click", closeModal);
+        });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && modal.classList.contains("is-open")) closeModal();
+        });
+      }
+
+      /* ---------- 评论 / 举报 / 作者档案 弹窗 ---------- */
+      document.querySelectorAll("[data-comment]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var name = btn.getAttribute("data-comment");
+          openModal("发表评论", "关于《" + name + "》，写下你的真实感受吧。",
+            '<form class="lc-form" data-fake-form>' +
+            '<label for="lc-comment-text">评论内容</label>' +
+            '<textarea class="lc-textarea" id="lc-comment-text" placeholder="说说这支视频哪里打动了你……"></textarea>' +
+            '<button type="submit" class="lc-btn lc-btn--primary">提交评论</button>' +
+            "</form>");
+          bindFakeForm("评论已提交，编辑会在 24 小时内审核");
+        });
+      });
+      document.querySelectorAll("[data-report]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var name = btn.getAttribute("data-report");
+          openModal("反馈与举报", "帮助我们维护社区内容品质。",
+            '<form class="lc-form" data-fake-form>' +
+            '<label for="lc-report-text">问题描述</label>' +
+            '<textarea class="lc-textarea" id="lc-report-text" placeholder="请描述具体问题，例如画面、版权或信息准确性…"></textarea>' +
+            '<button type="submit" class="lc-btn lc-btn--warn">提交反馈</button>' +
+            "</form>");
+          bindFakeForm("反馈已收到，感谢你帮助我们持续提升内容品质");
+        });
+      });
+      var authorProfiles = {
+        "阿葱的镜头": "成都本地创作者，跟拍夜行专题三年。擅长低照度环境里的人物质感，作品保留完整现场声与人物口述。作品 46 支，粉丝 12.8 万。",
+        "老K不熬夜": "前媒体记者，全职社区影像创作者。菜市场纪录片系列已更新至第 400 天，擅长用长对话打开被拍摄者。作品 38 支，粉丝 21.4 万。",
+        "小满手记": "摄影讲师，老虎菜实验室常驻作者。把运镜与布光拆成三步以内练习，附参数与作业清单。作品 62 支，粉丝 17.6 万。",
+        "晚风食记": "从菜市场到后厨的长期记录者，做过 30 余期食材供应链探访，关注一顿饭背后的人。作品 54 支，粉丝 15.2 万。",
+        "木木改造中": "非专业出身的改造爱好者，12 期完整记录 60 ㎡ 老房改造，公开预算表与踩坑清单。作品 29 支，粉丝 9.8 万。",
+        "松野来信": "长期在西南山区行走，专注无信号环境户外记录，保留风声与脚步，完播率居平台前列。作品 33 支，粉丝 11.5 万。"
+      };
+      document.querySelectorAll("[data-author]").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var name = btn.getAttribute("data-author");
+          openModal(name, "创作者档案",
+            '<p style="color:#c3cfd2;font-size:.88rem;margin:0 0 14px">' + escapeHtml(authorProfiles[name] || "") + "</p>" +
+            '<button type="button" class="lc-btn lc-btn--sm" data-close-modal2>关闭</button>');
+          var closeBtn = modalBody.querySelector("[data-close-modal2]");
+          if (closeBtn) closeBtn.addEventListener("click", closeModal);
+        });
+      });
+
+      function bindFakeForm(msg) {
+        var form = modalBody.querySelector("[data-fake-form]");
+        if (!form) return;
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          closeModal();
+          toast(msg);
+        });
+      }
+
+      /* ---------- 上传作品 / 联系编辑部 / 成为创作者 ---------- */
+      function uploadModal() {
+        openModal("上传作品", "上传前请确认内容为原创或已获授权，并阅读平台内容规范。",
+          '<form class="lc-form" data-fake-form>' +
+          '<label for="lc-upload-title">作品标题</label>' +
+          '<input class="lc-input" id="lc-upload-title" placeholder="例如：夜行成都 · 第四集" required>' +
+          '<label for="lc-upload-type">内容类型</label>' +
+          '<input class="lc-input" id="lc-upload-type" placeholder="城市探索 / 教程干货 / 人物访谈…">' +
+          '<label for="lc-upload-note">作品说明</label>' +
+          '<textarea class="lc-textarea" id="lc-upload-note" placeholder="简单介绍拍摄背景与授权情况"></textarea>' +
+          '<button type="submit" class="lc-btn lc-btn--primary">提交审核</button>' +
+          "</form>");
+        bindFakeForm("作品已提交，编辑部将在 5 个工作日内反馈审核结果");
+      }
+      function contactModal() {
+        openModal("联系编辑部", "内容合作、授权与用户反馈都从这里开始。",
+          '<form class="lc-form" data-fake-form>' +
+          '<label for="lc-contact-name">称呼</label>' +
+          '<input class="lc-input" id="lc-contact-name" placeholder="你的称呼" required>' +
+          '<label for="lc-contact-email">联系方式</label>' +
+          '<input class="lc-input" id="lc-contact-email" type="email" placeholder="邮箱或手机号" required>' +
+          '<label for="lc-contact-msg">想聊的内容</label>' +
+          '<textarea class="lc-textarea" id="lc-contact-msg" placeholder="合作类型、项目背景或问题描述"></textarea>' +
+          '<button type="submit" class="lc-btn lc-btn--primary">发送信息</button>' +
+          "</form>");
+        bindFakeForm("信息已发送，编辑部会尽快与你联系");
+      }
+      ["lc-upload-btn", "lc-cta-upload", "lc-hero-join"].forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) el.addEventListener("click", uploadModal);
+      });
+      ["lc-cta-contact"].forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) el.addEventListener("click", contactModal);
+      });
+
+      /* ---------- 复制链接 ---------- */
+      var copyBtn = document.getElementById("lc-copy-link");
+      if (copyBtn) {
+        copyBtn.addEventListener("click", function () {
+          var shareText = "老虎菜黑料网 · 原创视频品牌官网";
+          function done() { toast("分享链接已复制，欢迎分享给朋友"); }
+          function fallback() {
+            try {
+              var ta = document.createElement("textarea");
+              ta.value = shareText;
+              ta.setAttribute("readonly", "");
+              ta.style.position = "absolute";
+              ta.style.left = "-9999px";
+              document.body.appendChild(ta);
+              ta.select();
+              document.execCommand("copy");
+              document.body.removeChild(ta);
+              done();
+            } catch (err) {
+              toast("复制未成功，请手动分享本页面");
+            }
+          }
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(shareText).then(done, fallback);
+          } else {
+            fallback();
+          }
+        });
+      }
+
+      /* ---------- 回到顶部 ---------- */
+      var toTop = document.getElementById("lc-to-top");
+      if (toTop) {
+        window.addEventListener("scroll", function () {
+          if (window.scrollY > 520) toTop.classList.add("is-show");
+          else toTop.classList.remove("is-show");
+        }, { passive: true });
+        toTop.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      }
+    })();
+  </script>
+</body>
+                  </html>
